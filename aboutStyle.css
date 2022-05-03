@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+.navbar{
+    width: 85%;
+    padding: 5px 0;
+    margin: 0px 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.logo{
+    width: 188px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 21px;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #101E22;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+/* Det her er paralax effekt*/
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #330D0D;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23A89060'/%3E%3Cstop offset='1' stop-color='%23330D0D'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23F0D8C0' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23F0D8C0' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.35'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: cover;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#563727,transparent);
+    z-index: 1000;
+}
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#moon{
+    mix-blend-mode: screen;
+}
+section img#mountains_front{
+    z-index: 10;
+}
+#text{
+    position: absolute;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+    right: -350px;
+    text-shadow: 2px 2px 55px rgba(255, 255, 255, 0.45);
+}
+#btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #14111b;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+#btn:hover{
+    box-shadow: 2px 5px 25px rgba(243, 243, 243, 0.9);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    transition: 0.5s;
+}
+.sec{
+    
+    position: relative;
+    padding: 5% 18%;
+    background: linear-gradient(to bottom,#563727 0px,transparent 100px);
+    
+    align-items: center;
+}
+.sec h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: rgb(207, 188, 163);
+    text-transform: uppercase;
+}
+.sec p{
+    font-size: 1.7em;
+    color: #fff;
+    width: 100%;
+    text-align: justify;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="aboutStyle.css">
+    <title>About - MoonLight Coffee</title>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar" id="header">
+            <img onclick="document.location='index.html'" src="images/moonlightnon.png" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="index.html">Contact</a></li>
+            </ul>
+        </div>
+        <section>
+            <img src="images/stars.png" id="stars">
+            <img src="images/moon.png" id="moon">
+            <img src="images/mountains_behind.png" id="mountains_behind">
+            <h2 id="text">MoonLight</h2>
+            <a href="#sec" id="btn">Explore</a>
+            <img src="images/mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>About us</h2>
+            <br>
+            <p>
+                Moonlight coffee is committed to offering the highest quality coffee available to us to be enjoyed by you - our customer!<br><br><br>
+                What we promise – to offer the best tasting and quality coffee straight from the moon. 
+                At Moonlight Headquarters we love a good cup of coffee, and we want to share that experience with you! our customers.<br>
+                The best suppliers select the finest coffee in the entire Universe. It is toasted, mixed and then immediately sealed in coffee 
+                bags as fast as possible to ensure their freshness when you receive them. Everything is processed and prepared to the highest 
+                quality standards.<br><br>
+                We at Moonlight want to ensure, that our suppliers pay their coffee esate workers a fair amount. This leads us having to
+                charge more for our coffee, then other coffee brands you might now about. But something we have above all other coffee brands
+                is that we ensure you'll get your coffee, with peace of mind.<br><br><br><br>
+            </p>
+                <h2>
+                    Return Policy
+                </h2>
+                <br>
+            <p>
+                Returns are handled on a case-by-case basis with the goal of making our customers happy and meeting their needs.
+                <br><br>
+                Return Policy: Coffee and Tea<br>
+                We do not accept returns on coffee due to its perishable nature. However, we are quite willing to resolve problems as they arise. 
+                If you have any issues with your coffee, or if there are errors in your order, please contact us at info@MoonLight.com or +45 22979300 
+                within two days of receiving your order. We will do our best to ensure that you are satisfied.<br><br>
+                Return Policy: Merchandise (non-edible items)<br>
+                We would like you to be satisfied with your purchase. All Returns or Exchanges on merchandise (non-edible) items must be done within 30 days 
+                of the purchase date. Items purchased online can be returned only to our Headquarters; they can’t be returned to our café locations. Please 
+                email your order number, name, reason for a Return/Exchange, and the item and quantity you wish to Return/Exchange to info@MoonLight.com 
+                (or call us at +45 22979300). We will contact you with information on how your return will be processed. We will not refund the price of shipping.
+                <br><br>
+                All returns should be sent to:<br>
+                MoonLight Coffee Headquarters<br>
+                Attn: Customer Service<br>
+                Fensmark Kalkerupvej 14<br>
+                Zealand, DK<br>
+                4684<br>
+                Denmark
+            </p>
+        </div>
+
+        <script>
+            let stars = document.getElementById("stars");
+            let moon = document.getElementById("moon");
+            let mountains_behind = document.getElementById("mountains_behind");
+            let text = document.getElementById("text");
+            let btn = document.getElementById("btn");
+            let mountains_front = document.getElementById("mountains_front");
+            let header = document.getElementById("header");
+
+            window.addEventListener("scroll", function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.35 + "px";
+                moon.style.top = value * 1.05 + "px";
+                mountains_behind.style.top = value * 0.5 + "px";
+                mountains_front.style.top = value * 0 + "px";
+                text.style.marginRight = value * 3 + "px";
+                text.style.marginTop = value * 1.4 + "px";
+                btn.style.marginTop = value * 1.6 + "px";
+                header.style.top = value * 0.5 + "px";
+            })
+        </script>
+    </div>
+</body>
+</html>
